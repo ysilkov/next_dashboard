@@ -1,6 +1,5 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
-import { lusitana } from '@/app/ui/fonts';
 export const experimental_ppr = true;
 
 

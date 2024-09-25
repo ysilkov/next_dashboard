@@ -49,6 +49,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
    }catch(error){
     return {
       message: 'Database Error: Failed to Create Invoice.',
+      error: 'Big problem' 
     };
    }
  revalidatePath('/dashboard/invoices');
@@ -79,9 +80,10 @@ export async function createInvoice(prevState: State, formData: FormData) {
     SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
     WHERE id = ${id}
   `;
-  }catch(eroor){
+  }catch(error){
     return {
       message: 'Database Error: Failed to Create Invoice.',
+      error: 'Big problem' 
     };
   }
    revalidatePath('/dashboard/invoices');
@@ -93,6 +95,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
   }catch(error){
     return {
       message: 'Database Error: Failed to Create Invoice.',
+      error: 'Big problem' 
     };
   }
    revalidatePath('/dashboard/invoices');
