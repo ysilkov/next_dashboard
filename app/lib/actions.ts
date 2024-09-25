@@ -17,12 +17,11 @@ const UpdateInvoice = FormSchema.omit({ id: true, date: true });
 
 export type State = {
   errors?: {
-    map(arg0: (error: string) => import("react").JSX.Element): import("react").ReactNode;
-    customerId?: string[];
-    amount?: string[];
-    status?: string[];
+    customerId: string[];
+    amount: string[];
+    status: string[];
   };
-  message?: string | null;
+  message: string | null;
 };
  
 export async function createInvoice(prevState: State, formData: FormData) {
